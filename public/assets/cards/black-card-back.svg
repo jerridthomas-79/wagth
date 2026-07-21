@@ -1,0 +1,8 @@
+<svg width="360" height="520" viewBox="0 0 360 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="340" height="500" rx="28" fill="#0D0D0D" stroke="#B31C1C" stroke-width="4"/>
+  <rect x="28" y="28" width="304" height="464" rx="20" stroke="#B31C1C" stroke-opacity="0.5"/>
+  <path d="M180 145V310" stroke="#B31C1C" stroke-width="8" stroke-linecap="round"/>
+  <path d="M140 180L180 145L220 180" stroke="#B31C1C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="180" y="380" fill="#F5F1E6" font-size="28" text-anchor="middle" font-family="Georgia, serif" font-weight="700">GOING TO HELL</text>
+  <path d="M55 430C114 438 153 468 180 503C207 468 246 438 305 430" stroke="#FF6A00" stroke-width="6" stroke-linecap="round"/>
+</svg>
