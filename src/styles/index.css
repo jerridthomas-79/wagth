@@ -1,0 +1,261 @@
+:root {
+  --hellfire-black: #0d0d0d;
+  --damned-cream: #f5f1e6;
+  --inferno-red: #b31c1c;
+  --ember-orange: #ff6a00;
+  --wicked-teal: #22bbaf;
+  --smoke-gray: #292929;
+  --card-shadow: 0 14px 35px rgba(0, 0, 0, 0.32);
+  --font-display: "Georgia", "Times New Roman", serif;
+  --font-body: "Avenir Next", "Trebuchet MS", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top, rgba(255, 106, 0, 0.16), transparent 30%),
+    linear-gradient(180deg, #131313 0%, #0d0d0d 48%, #1d1109 100%);
+  color: var(--damned-cream);
+  font-family: var(--font-body);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.95rem 1.4rem;
+  color: var(--damned-cream);
+  background: linear-gradient(135deg, var(--inferno-red), var(--ember-orange));
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ghost-button {
+  background: rgba(245, 241, 230, 0.08);
+  border: 1px solid rgba(245, 241, 230, 0.18);
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 0.45rem;
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(245, 241, 230, 0.18);
+  background: rgba(13, 13, 13, 0.5);
+  color: var(--damned-cream);
+}
+
+textarea {
+  resize: vertical;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: inherit;
+}
+
+.page-shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.5rem 0 3rem;
+}
+
+.home-shell {
+  padding-top: 3rem;
+}
+
+.hero {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.hero-mark img {
+  width: min(420px, 100%);
+}
+
+.hero-copy {
+  max-width: 640px;
+  color: rgba(245, 241, 230, 0.82);
+  line-height: 1.5;
+}
+
+.panel-grid,
+.layout-grid,
+.response-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.panel-grid,
+.layout-grid {
+  margin-top: 1.5rem;
+}
+
+.panel {
+  padding: 1.2rem;
+  border: 1px solid rgba(245, 241, 230, 0.12);
+  border-radius: 28px;
+  background: rgba(17, 17, 17, 0.86);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(16px);
+}
+
+.status-panel {
+  margin-top: 1rem;
+  padding: 0 0.3rem;
+}
+
+.room-header,
+.round-meta,
+.header-actions,
+.response-actions {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.layout-grid {
+  grid-template-columns: 320px minmax(0, 1fr);
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 1rem;
+}
+
+.play-area {
+  display: grid;
+  gap: 1rem;
+}
+
+.card-shell {
+  min-height: 220px;
+  border-radius: 30px;
+  padding: 1.4rem;
+  box-shadow: var(--card-shadow);
+}
+
+.card-shell.black {
+  background: linear-gradient(180deg, #111 0%, #060606 100%);
+  border: 2px solid rgba(179, 28, 28, 0.9);
+}
+
+.card-shell.white {
+  background: var(--damned-cream);
+  color: var(--smoke-gray);
+}
+
+.prompt-card {
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+}
+
+.prompt-copy {
+  font: 700 1.7rem/1.25 var(--font-display);
+  text-align: center;
+}
+
+.response-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.response-button {
+  padding: 0;
+  background: transparent;
+}
+
+.response-button .card-shell {
+  min-height: 180px;
+}
+
+.response-button.winner .card-shell {
+  outline: 3px solid var(--wicked-teal);
+}
+
+.player-list {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.player-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(245, 241, 230, 0.08);
+}
+
+.eyebrow,
+.microcopy {
+  margin: 0;
+  color: rgba(245, 241, 230, 0.68);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+}
+
+.late-warning {
+  animation: pulse-border 1s ease-in-out infinite;
+}
+
+.wait-state {
+  display: grid;
+  gap: 1rem;
+}
+
+.error-text {
+  color: #ff9e8e;
+}
+
+@keyframes pulse-border {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(255, 106, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(255, 106, 0, 0.38);
+  }
+}
+
+@media (max-width: 900px) {
+  .layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
