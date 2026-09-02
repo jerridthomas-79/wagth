@@ -1,3 +1,0 @@
-spectral-lightning.png
-spectral-smoke-pool.png
-toxic-flame-strip.png

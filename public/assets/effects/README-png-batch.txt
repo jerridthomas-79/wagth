@@ -1,1 +1,0 @@
-Temporary manifest for PNG batch; remove after binary commit verification.
